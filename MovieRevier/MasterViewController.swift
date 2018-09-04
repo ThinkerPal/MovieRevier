@@ -1,5 +1,5 @@
 //
-//  MasterViewController.swift
+//  MoviesViewController.swift
 //  MovieRevier
 //
 //  Created by Rui Yang Tan on 4/9/18.
@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+class MoviesViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
     var detailViewController: DetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil

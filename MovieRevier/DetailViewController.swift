@@ -1,5 +1,5 @@
 //
-//  DetailViewController.swift
+//  ReviewsViewController.swift
 //  MovieRevier
 //
 //  Created by Rui Yang Tan on 4/9/18.
@@ -8,9 +8,9 @@
 
 import UIKit
 import CoreData
-class DetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate {
+class ReviewsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate {
   
-    var detailViewController: DetailViewController? = nil
+    var detailViewController: ReviewsViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
     
 

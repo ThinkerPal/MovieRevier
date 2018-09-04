@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		A08B2F5C213E1B9E008D2674 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08B2F5B213E1B9E008D2674 /* AppDelegate.swift */; };
 		A08B2F5F213E1B9E008D2674 /* MovieRevier.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A08B2F5D213E1B9E008D2674 /* MovieRevier.xcdatamodeld */; };
-		A08B2F61213E1B9E008D2674 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08B2F60213E1B9E008D2674 /* MasterViewController.swift */; };
-		A08B2F63213E1B9E008D2674 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08B2F62213E1B9E008D2674 /* DetailViewController.swift */; };
+		A08B2F61213E1B9E008D2674 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08B2F60213E1B9E008D2674 /* MoviesViewController.swift */; };
+		A08B2F63213E1B9E008D2674 /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08B2F62213E1B9E008D2674 /* ReviewsViewController.swift */; };
 		A08B2F66213E1B9E008D2674 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A08B2F64213E1B9E008D2674 /* Main.storyboard */; };
 		A08B2F68213E1BA0008D2674 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A08B2F67213E1BA0008D2674 /* Assets.xcassets */; };
 		A08B2F6B213E1BA0008D2674 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A08B2F69213E1BA0008D2674 /* LaunchScreen.storyboard */; };
@@ -20,8 +20,8 @@
 		A08B2F58213E1B9E008D2674 /* MovieRevier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieRevier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A08B2F5B213E1B9E008D2674 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A08B2F5E213E1B9E008D2674 /* MovieRevier.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MovieRevier.xcdatamodel; sourceTree = "<group>"; };
-		A08B2F60213E1B9E008D2674 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		A08B2F62213E1B9E008D2674 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A08B2F60213E1B9E008D2674 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		A08B2F62213E1B9E008D2674 /* ReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewController.swift; sourceTree = "<group>"; };
 		A08B2F65213E1B9E008D2674 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A08B2F67213E1BA0008D2674 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A08B2F6A213E1BA0008D2674 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,8 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				A08B2F5B213E1B9E008D2674 /* AppDelegate.swift */,
-				A08B2F60213E1B9E008D2674 /* MasterViewController.swift */,
-				A08B2F62213E1B9E008D2674 /* DetailViewController.swift */,
+				A08B2F60213E1B9E008D2674 /* MoviesViewController.swift */,
+				A08B2F62213E1B9E008D2674 /* ReviewsViewController.swift */,
 				A08B2F64213E1B9E008D2674 /* Main.storyboard */,
 				A08B2F67213E1BA0008D2674 /* Assets.xcassets */,
 				A08B2F69213E1BA0008D2674 /* LaunchScreen.storyboard */,
@@ -143,8 +143,8 @@
 			files = (
 				A08B2F5C213E1B9E008D2674 /* AppDelegate.swift in Sources */,
 				A08B2F5F213E1B9E008D2674 /* MovieRevier.xcdatamodeld in Sources */,
-				A08B2F61213E1B9E008D2674 /* MasterViewController.swift in Sources */,
-				A08B2F63213E1B9E008D2674 /* DetailViewController.swift in Sources */,
+				A08B2F61213E1B9E008D2674 /* MoviesViewController.swift in Sources */,
+				A08B2F63213E1B9E008D2674 /* ReviewsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
