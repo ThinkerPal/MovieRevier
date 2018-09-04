@@ -7,9 +7,12 @@
 //
 
 import UIKit
-
-class DetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+import CoreData
+class DetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate {
   
+    var detailViewController: DetailViewController? = nil
+    var managedObjectContext: NSManagedObjectContext? = nil
+    
 
     
 
@@ -18,7 +21,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     func configureView() {
         // Update the user interface for the detail item.
         if let movie = movie {
-            self.title = "\(String(describing: movie.name)) \((movie.year))"
+            self.title = "\(movie.name!) \((movie.year))"
         }
     }
 
@@ -47,7 +50,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reviewCell", for: indexPath)
         let movie = fetchedResultsController.object(at: indexPath)
         configureCell(cell, withMovie: movie)
         return cell
