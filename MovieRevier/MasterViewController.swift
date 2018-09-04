@@ -35,23 +35,45 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     @objc
     func insertNewObject(_ sender: Any) {
-        let context = self.fetchedResultsController.managedObjectContext
-        let newMovie = Movie(context: context)
-             
-        // If appropriate, configure the new managed object.
-        newMovie.timestamp = Date()
-        newMovie.name = "Testing"
-        newMovie.year = 1990
+      
+        
+        let alert = UIAlertController(title: "Add Movie", message: "", preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            textField.placeholder = "Movie Name"
+            
+        }
+        alert.addTextField { (textField) in
+            textField.placeholder = "Movie Year"
+            textField.keyboardType = .numberPad
+            
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let add = UIAlertAction(title: "Add", style: .default) { (_) in
+            let context = self.fetchedResultsController.managedObjectContext
+            let newMovie = Movie(context: context)
+            newMovie.name = alert.textFields![0].text!
+            newMovie.year = Int16(alert.textFields![1].text!)!
+            do {
+                try context.save()
+            } catch {
+                // Replace this implementation with code to handle the error appropriately.
+                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+        }
+        alert.addAction(cancel)
+        alert.addAction(add)
+        present(alert, animated: true, completion:nil)
+        
+    
+//        // If appropriate, configure the new managed object.
+//        newMovie.timestamp = Date()
+//        newMovie.name = "Testing"
+//        newMovie.year = 1990
 
         // Save the context.
-        do {
-            try context.save()
-        } catch {
-            // Replace this implementation with code to handle the error appropriately.
-            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            let nserror = error as NSError
-            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-        }
+        
     }
 
     // MARK: - Segues
@@ -109,7 +131,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     func configureCell(_ cell: UITableViewCell, withMovie movie: Movie) {
         cell.textLabel!.text = movie.name!
-        cell.detailTextLabel!.text = movie.timestamp!.description
+        cell.detailTextLabel!.text = String(movie.year)
     }
 
     // MARK: - Fetched results controller
