@@ -6,7 +6,7 @@
             <userInfo/>
         </attribute>
         <attribute name="year" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="reviews" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Review" inverseName="movie" inverseEntity="Review" syncable="YES"/>
+        <relationship name="reviews" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Review" inverseName="movie" inverseEntity="Review" syncable="YES"/>
         <userInfo/>
     </entity>
     <entity name="Review" representedClassName="Review" syncable="YES" codeGenerationType="class">
@@ -17,6 +17,6 @@
     </entity>
     <elements>
         <element name="Movie" positionX="-5379.12890625" positionY="4063.984375" width="128" height="103"/>
-        <element name="Review" positionX="-5164.44140625" positionY="4065.8984375" width="128" height="103"/>
+        <element name="Review" positionX="-5174.38671875" positionY="4237.79296875" width="128" height="103"/>
     </elements>
 </model>
