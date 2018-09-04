@@ -36,10 +36,10 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     @objc
     func insertNewObject(_ sender: Any) {
         let context = self.fetchedResultsController.managedObjectContext
-        let newEvent = Movie(context: context)
+        let newMovie = Movie(context: context)
              
         // If appropriate, configure the new managed object.
-        newEvent.timestamp = Date()
+        newMovie.timestamp = Date()
 
         // Save the context.
         do {
@@ -75,12 +75,12 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let sectionInfo = fetchedResultsController.sections![section]
         return sectionInfo.numberOfObjects
-    }
+    }ç
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let event = fetchedResultsController.object(at: indexPath)
-        configureCell(cell, withEvent: event)
+        let movie = fetchedResultsController.object(at: indexPath)
+        configureCell(cell, withMovie: movie)
         return cell
     }
 
@@ -105,8 +105,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         }
     }
 
-    func configureCell(_ cell: UITableViewCell, withEvent event: Movie) {
-        cell.textLabel!.text = event.timestamp!.description
+    func configureCell(_ cell: UITableViewCell, withMovie movie: Movie) {
+        cell.textLabel!.text = movie.timestamp!.description
     }
 
     // MARK: - Fetched results controller
@@ -167,9 +167,9 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             case .delete:
                 tableView.deleteRows(at: [indexPath!], with: .fade)
             case .update:
-                configureCell(tableView.cellForRow(at: indexPath!)!, withEvent: anObject as! Movie)
+                configureCell(tableView.cellForRow(at: indexPath!)!, withMovie: anObject as! Movie)
             case .move:
-                configureCell(tableView.cellForRow(at: indexPath!)!, withEvent: anObject as! Movie)
+                configureCell(tableView.cellForRow(at: indexPath!)!, withMovie: anObject as! Movie)
                 tableView.moveRow(at: indexPath!, to: newIndexPath!)
         }
     }
